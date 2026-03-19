@@ -27,7 +27,6 @@ func calculateItemPrice(itemName string) (float64, bool) {
 	return basePrice, true	
 }
 
-arr:= []int{1,2,3}
 
 func main(){
 
