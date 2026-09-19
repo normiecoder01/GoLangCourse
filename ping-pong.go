@@ -11,7 +11,7 @@ func ping(ctx context.Context,ch chan string) {
 		select {
 			case <- ctx.Done():
 				return
-			case ch <- fmt.Sprintf("ping: v", time.Now()):
+			case ch <- fmt.Sprintf("ping: %cv", time.Now()):
 				time.Sleep(1* time.Second)
 		}
 	}
@@ -31,7 +31,7 @@ func pong(ctx context.Context, ch chan string) {
 
 func main() {
 	ctx, cancel := context.WithCancel(context.Background())
-		defer cancel()
+	defer cancel()
 
 	pingerChan 	:= make(chan string)
 	done		:= make(chan struct{})
