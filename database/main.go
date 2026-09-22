@@ -5,12 +5,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"time"
-
-	// This is unnamed import becasuse this import functionality
-	// is going to be handled by the "database/sql" import
 	"log"
 	"os"
 
+	// This is unnamed import becasuse this import functionality
+	// is going to be handled by the "database/sql" import
 	_ "github.com/mattn/go-sqlite3"
 	"golang.org/x/crypto/bcrypt"
 )
